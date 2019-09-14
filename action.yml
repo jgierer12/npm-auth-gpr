@@ -3,6 +3,9 @@ description:
   Authenticate npm for consuming and publishing packages from and to the GitHub
   Package Registry
 author: jgierer12
+branding:
+  icon: package
+  color: gray-dark
 inputs:
   token:
     description:
