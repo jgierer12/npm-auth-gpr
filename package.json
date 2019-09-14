@@ -1,8 +1,22 @@
 {
   "name": "@jgierer12/github-action-npm-auth-gpr",
-  "version": "1.0.0",
+  "private": true,
+  "repository": "https://github.com/jgierer12/npm-auth-gpr",
+  "author": "Jonas Gierer <jonas@gierer.xyz>",
+  "license": "MIT",
   "main": "index.js",
+  "scripts": {
+    "lint": "run-p --print-label --continue-on-error lint:*",
+    "lint:js": "eslint --color --ignore-path .gitignore '**/*.js'",
+    "lint:other": "prettier --check --ignore-path .gitignore '**/*.{json,md,mdx,yml,graphql}'"
+  },
   "dependencies": {
     "@actions/core": "^1.1.0"
+  },
+  "devDependencies": {
+    "@jgierer12/js-configs": "^1.0.2",
+    "eslint": "^6.3.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.17.0"
   }
 }

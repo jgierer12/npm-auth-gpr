@@ -5,7 +5,9 @@ description:
 author: jgierer12
 inputs:
   token:
-    description: The token used for authentication. Usually, this should be your `secrets.GITHUB_TOKEN`
+    description:
+      The token used for authentication. Usually, this should be your
+      `secrets.GITHUB_TOKEN`
     required: true
 runs:
   using: node12
