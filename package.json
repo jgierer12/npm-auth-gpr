@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
-    "@actions/core": "^1.1.0",
-    "@actions/exec": "^1.0.0"
+    "@actions/core": "^1.1.0"
   }
 }
