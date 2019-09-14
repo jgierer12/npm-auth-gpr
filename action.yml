@@ -1,0 +1,12 @@
+name: Authenticate npm with the GPR
+description:
+  Authenticate npm for consuming and publishing packages from and to the GitHub
+  Package Registry
+author: jgierer12
+inputs:
+  token:
+    description: The token used for authentication. Usually, this should be your `secrets.GITHUB_TOKEN`
+    required: true
+runs:
+  using: node12
+  main: index.js
