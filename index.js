@@ -1,4 +1,5 @@
-const { exec } = require(`@actions/exec`);
+const { promisify } = require(`util`);
+const exec = promisify(require(`child_process`).exec);
 const core = require(`@actions/core`);
 
 const run = async () => {
