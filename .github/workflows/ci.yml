@@ -18,7 +18,9 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12.x
-      - uses: jgierer12/npm-auth-gpr@dist
+      - name: Self test
+        uses: ./
+        id: selftest
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       - run: npm ci
