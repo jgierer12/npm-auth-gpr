@@ -4,6 +4,7 @@ on:
   pull_request:
     branches: [master]
   push:
+    branches: [master]
 
 jobs:
   lint:
@@ -18,10 +19,8 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12.x
-      - run: npm install @actions/core
       - name: Self test
         uses: ./
-        id: selftest
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       - run: npm ci
