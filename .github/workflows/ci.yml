@@ -21,5 +21,5 @@ jobs:
       - uses: jgierer12/npm-auth-gpr@dist
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-      - run: npm install
+      - run: npm ci
       - run: npm run lint
