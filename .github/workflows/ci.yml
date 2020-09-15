@@ -20,8 +20,9 @@ jobs:
         uses: ./
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12.x
-      - run: npm ci
-      - run: npm run lint
+      - run: cat .npmrc
+      # - uses: actions/setup-node@v1
+      #   with:
+      #     node-version: 12.x
+      # - run: npm ci
+      # - run: npm run lint
