@@ -4,8 +4,9 @@
   "repository": "https://github.com/jgierer12/npm-auth-gpr",
   "author": "Jonas Gierer <jonas@gierer.xyz>",
   "license": "MIT",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "build": "ncc build index.js --license LICENSE",
     "lint": "run-p --print-label --continue-on-error lint:*",
     "lint:js": "eslint --color --ignore-path .gitignore **/*.js",
     "lint:other": "prettier --check --ignore-path .gitignore **/*.{json,md,mdx,yml,graphql}"
@@ -15,6 +16,7 @@
   },
   "devDependencies": {
     "@jgierer12/js-configs": "^1.0.2",
+    "@vercel/ncc": "^0.24.1",
     "eslint": "^7.9.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.1.1"
