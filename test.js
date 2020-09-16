@@ -1,12 +1,14 @@
 const { promisify } = require(`util`);
-const appendFile = promisify(require(`fs`).appendFile);
+const readFile = promisify(require(`fs`).readFile);
 const core = require(`@actions/core`);
 
 const run = async () => {
   const token = core.getInput(`token`);
 
   try {
-    await appendFile(`.npmrc`, `//npm.pkg.github.com/:_authToken=${token}`);
+    const fileContent = await readFile(`.npmrc`);
+    if (!fileContent.toString().endsWith(token))
+      throw new Error(`Token not found in .npmrc file`);
   } catch (error) {
     core.setFailed(error.message);
   }
