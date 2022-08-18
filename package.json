@@ -11,7 +11,7 @@
     "lint:other": "prettier --check --ignore-path .gitignore '**/*.{json,md,mdx,yml,graphql}'"
   },
   "dependencies": {
-    "@actions/core": "^1.1.0"
+    "@actions/core": "^1.9.1"
   },
   "devDependencies": {
     "@jgierer12/js-configs": "^1.0.2",
