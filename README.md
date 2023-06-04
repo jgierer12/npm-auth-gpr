@@ -1,3 +1,6 @@
+> **Warning**
+> This project is not actively maintained anymore
+
 # npm-auth-gpr
 
 This action authenticates npm for consuming and publishing packages from and to
